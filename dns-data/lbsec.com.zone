@@ -1,0 +1,25 @@
+$TTL 86400
+@ IN SOA dns1.lbsec.com. root.lbsec.com. (
+  202005181 ;Serial
+  3600 ;Refresh
+  1800 ;Retry
+  604800 ;Expire
+  86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS dns1.lbsec.com.
+
+;Mail exchanger
+lbsec.com. IN MX 10 tina.lbsec.com.
+
+
+;==== A Records: HostName To Ip Address
+
+;-- Web/file/DHCP/DNS server
+baron   IN A 10.10.1.2
+
+
+;-- Console Server, DNS/Bind, LDAP, Vault/Zookeeper
+tina    IN A 10.10.1.4
+dns1    IN A 10.10.1.4
+
