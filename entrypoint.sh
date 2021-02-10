@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #-----------------------------------------------------------------------------
 #  Output debugging/logging message
@@ -16,7 +16,13 @@ dlog(){
 
 dlog "Ready to start"
 
+#-- out some internal params
 ip addr show
+dlog "ID:" 
+id named
+
+#-- adjust permission 
+chown -R named:named /var/named
 
 #-- check params
 FCFG=/var/named/named.conf

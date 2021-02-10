@@ -6,7 +6,9 @@ docker rm $IMG
 
 docker run -d \
 --name $IMG \
--p 5353:53/udp \
--p 5354:53/tcp \
---mount source=~/dns-demo/dns-data,target=/var/named \
+-p 5453:53/udp \
+-p 5453:53/tcp \
+-e VERBOSE=1 \
+-v /home/eugene/dnsdemo/named:/var/named \
 etaylashev/dns-demo
+

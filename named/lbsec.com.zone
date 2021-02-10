@@ -14,12 +14,7 @@ lbsec.com. IN MX 10 tina.lbsec.com.
 
 
 ;==== A Records: HostName To Ip Address
-
-;-- Web/file/DHCP/DNS server
 baron   IN A 10.10.1.2
-
-
-;-- Console Server, DNS/Bind, LDAP, Vault/Zookeeper
 tina    IN A 10.10.1.4
-dns1    IN A 10.10.1.4
+dns1    IN A 10.10.1.6
 
